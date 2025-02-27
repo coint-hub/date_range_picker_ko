@@ -43,7 +43,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
         ),
         Expanded(
           child: Text(
-            DateFormat.yMMM().format(currentMonth),
+            DateFormat.yMMM('ko_KR').format(currentMonth),
             textAlign: TextAlign.center,
             style: style,
           ),
@@ -52,7 +52,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
           const SizedBox(width: 16),
           Expanded(
             child: Text(
-              DateFormat.yMMM().format(nextMonth!),
+              DateFormat.yMMM('ko_KR').format(nextMonth!),
               textAlign: TextAlign.center,
               style: style,
             ),
