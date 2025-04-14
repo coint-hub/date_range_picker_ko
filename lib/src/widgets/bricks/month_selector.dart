@@ -11,7 +11,8 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
     this.nextMonth,
     this.style,
     this.doubleMonth = true,
-  })  : assert(doubleMonth ? nextMonth != null : true),
+  })
+      : assert(doubleMonth ? nextMonth != null : true),
         super(key: key);
 
   /// The current month displayed.
@@ -39,7 +40,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
         IconButton(
           onPressed: onPrevious,
           splashRadius: 16,
-          icon: const Icon(Icons.keyboard_arrow_left),
+          icon: const Icon(Icons.keyboard_arrow_left, size: 32.0,),
         ),
         Expanded(
           child: Text(
@@ -61,7 +62,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
         IconButton(
           splashRadius: 16,
           onPressed: onNext,
-          icon: const Icon(Icons.keyboard_arrow_right),
+          icon: const Icon(Icons.keyboard_arrow_right, size: 32.0,),
         ),
       ],
     );

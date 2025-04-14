@@ -139,12 +139,12 @@ class CalendarTheme {
       required this.disabledTextStyle,
       this.quickDateRangeTextStyle = const TextStyle(
         color: Colors.black,
-        fontSize: 14,
+        fontSize: 21,
       ),
       this.quickDateRangeBackgroundColor,
       this.monthTextStyle,
       this.dayNameTextStyle =
-          const TextStyle(color: Colors.black45, fontSize: 10),
+          const TextStyle(color: Colors.black45, fontSize: 15),
       required this.radius,
       required this.tileSize,
       this.selectedQuickDateRangeColor,
