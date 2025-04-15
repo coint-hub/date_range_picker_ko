@@ -11,6 +11,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
     this.nextMonth,
     this.style,
     this.doubleMonth = true,
+    this.iconSize = 24.0,
   })  : assert(doubleMonth ? nextMonth != null : true),
         super(key: key);
 
@@ -32,6 +33,8 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
   /// The text style of the displayed month.
   final TextStyle? style;
 
+  final double iconSize;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -39,7 +42,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
         IconButton(
           onPressed: onPrevious,
           splashRadius: 16,
-          icon: const Icon(Icons.keyboard_arrow_left),
+          icon: Icon(Icons.keyboard_arrow_left, size: iconSize),
         ),
         Expanded(
           child: Text(
@@ -61,7 +64,7 @@ class MonthSelectorAndDoubleIndicator extends StatelessWidget {
         IconButton(
           splashRadius: 16,
           onPressed: onNext,
-          icon: const Icon(Icons.keyboard_arrow_right),
+          icon: Icon(Icons.keyboard_arrow_right, size: iconSize),
         ),
       ],
     );
