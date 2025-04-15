@@ -140,6 +140,7 @@ class DateRangePickerWidget extends StatefulWidget {
     this.displayMonthsSeparator = true,
     this.separatorThickness = 1,
     this.allowSingleTapDaySelection = false,
+    this.quickDateRangesWidth = 200,
   }) : super(key: key);
 
   /// Called whenever the selected date range is changed.
@@ -188,6 +189,8 @@ class DateRangePickerWidget extends StatefulWidget {
 
   /// Thickness of the vertical separator between months if [doubleMonth] mode is active
   final double separatorThickness;
+
+  final double quickDateRangesWidth;
 
   @override
   State<DateRangePickerWidget> createState() => DateRangePickerWidgetState();
@@ -282,7 +285,7 @@ class DateRangePickerWidgetState extends State<DateRangePickerWidget> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            width: 200,
+            width: widget.quickDateRangesWidth,
             decoration: BoxDecoration(
               color: widget.theme.quickDateRangeBackgroundColor,
               borderRadius: BorderRadius.only(
